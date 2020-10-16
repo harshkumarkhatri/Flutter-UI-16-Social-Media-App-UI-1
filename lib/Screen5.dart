@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Widgets/chatItem.dart';
+
 class Screen5 extends StatefulWidget {
   @override
   _Screen5State createState() => _Screen5State();
@@ -35,28 +37,37 @@ class _Screen5State extends State<Screen5> {
           child: CustomScrollView(
         slivers: [
           SliverList(
-              delegate: SliverChildListDelegate([
-            HeaderWidget("hulla"),
-            Container(height: 400, color: Colors.yellow),
-            Container(
-              height: 500,
-              color: Colors.black,
-            )
-          ]))
+            delegate: SliverChildListDelegate(
+              [
+                chatItem("Vincent Luna"),
+                Divider(
+                  thickness: 1.5,
+                ),
+                chatItem("Francis Clarke"),
+                Divider(
+                  thickness: 1.5,
+                ),
+                chatItem(" Ramsey"),
+                Divider(
+                  thickness: 1.5,
+                ),
+                chatItem("Lucas Wilson"),
+                Divider(
+                  thickness: 1.5,
+                ),
+                chatItem("Nell Luna"),
+                Divider(
+                  thickness: 1.5,
+                ),
+                chatItem("Lola Wright"),
+                Divider(
+                  thickness: 1.5,
+                ),
+              ],
+            ),
+          ),
         ],
       )),
-    );
-  }
-
-  Widget HeaderWidget(text) {
-    return Padding(
-      padding: const EdgeInsets.all(15.0),
-      child: Container(
-          // height: 150,
-          color: Colors.pink[50],
-          child: Row(
-            children: [Container(height: 64,width:64, color: Colors.yellow)],
-          )),
     );
   }
 
