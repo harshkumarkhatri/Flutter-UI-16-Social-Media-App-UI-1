@@ -1,4 +1,10 @@
+// This file is for the profile page screen
+
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_16_sushi_social_media_app_ui/Screen10.dart';
+import 'package:flutter_ui_16_sushi_social_media_app_ui/Screen5.dart';
+import 'package:flutter_ui_16_sushi_social_media_app_ui/Screen6.dart';
+import 'package:flutter_ui_16_sushi_social_media_app_ui/Screen8.dart';
 import 'package:flutter_ui_16_sushi_social_media_app_ui/Widgets/profileElements.dart';
 
 import 'Widgets/rectangle.dart';
@@ -16,11 +22,9 @@ class _Screen4State extends State<Screen4> {
         body: CustomScrollView(
       slivers: [
         SliverAppBar(
-          // pinned: true,
           expandedHeight: 280,
           backgroundColor: Colors.grey,
           flexibleSpace: FlexibleSpaceBar(
-            // title: Text("Hears"),
             background: Column(
               children: [
                 SizedBox(height: 120),
@@ -45,7 +49,6 @@ class _Screen4State extends State<Screen4> {
                   "NEW YORK, USA",
                   style: TextStyle(
                     color: Colors.white,
-                    // fontSize: 30,
                     letterSpacing: 1.4,
                     fontWeight: FontWeight.w600,
                     shadows: <Shadow>[
@@ -72,16 +75,35 @@ class _Screen4State extends State<Screen4> {
                 )
               ],
             ),
-            // collapseMode: CollapseMode.pin,
           ),
         ),
         SliverList(
           delegate: SliverChildListDelegate(
             [
-              squares(),
-              rectangle(),
-              squares(),
-              rectangle(),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (_) => Screen5()));
+                  },
+                  child: squares()),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (_) => Screen6()));
+                  },
+                  child: rectangle()),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (_) => Screen8()));
+                  },
+                  child: squares()),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (_) => Screen10()));
+                  },
+                  child: rectangle()),
               squares(),
               rectangle(),
               squares()

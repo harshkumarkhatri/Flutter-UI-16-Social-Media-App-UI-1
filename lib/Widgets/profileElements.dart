@@ -21,7 +21,6 @@ Widget profileElement(number,identifier) {
       Text(
         identifier,
         style: TextStyle(
-          // fontSize: 27,
           color: Colors.white, letterSpacing: 1.2,
           shadows: <Shadow>[
             Shadow(

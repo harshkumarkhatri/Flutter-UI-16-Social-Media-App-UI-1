@@ -1,5 +1,7 @@
-// This screen is for the blog screen.abstract
+// This screen is for the blog screen
+
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_16_sushi_social_media_app_ui/Screen9.dart';
 
 import 'Widgets/commentItem.dart';
 
@@ -61,7 +63,7 @@ class _Screen8State extends State<Screen8> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left:15,right:15,bottom:15),
+                  padding: EdgeInsets.only(left: 15, right: 15, bottom: 15),
                   child: Text(
                     "On: March 31st, 2016",
                     style: TextStyle(
@@ -72,7 +74,8 @@ class _Screen8State extends State<Screen8> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left:15.0,right:15,bottom:50),
+                  padding:
+                      const EdgeInsets.only(left: 15.0, right: 15, bottom: 50),
                   child: Row(
                     children: [
                       Icon(
@@ -89,7 +92,13 @@ class _Screen8State extends State<Screen8> {
                         ),
                       ),
                       SizedBox(width: 5),
-                      Icon(Icons.comment_rounded, color: Colors.white54),
+                      GestureDetector(
+                          onTap: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (_) => Screen9()));
+                          },
+                          child: Icon(Icons.comment_rounded,
+                              color: Colors.white54)),
                       SizedBox(width: 2),
                       Text(
                         "1.1K",

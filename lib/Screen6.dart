@@ -1,3 +1,5 @@
+// This file is for the comments screen
+
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_16_sushi_social_media_app_ui/Widgets/commentItem.dart';
 

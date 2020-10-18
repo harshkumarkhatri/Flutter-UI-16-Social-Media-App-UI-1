@@ -1,4 +1,9 @@
+// This file is for the login screen
+
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_16_sushi_social_media_app_ui/Screen4.dart';
+
+import 'Screen3.dart';
 
 class Screen2 extends StatefulWidget {
   @override
@@ -10,7 +15,7 @@ class _Screen2State extends State<Screen2> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-              child: Column(
+        child: Column(
           children: [
             Container(
               height: 0.8 * MediaQuery.of(context).size.height / 2,
@@ -49,30 +54,42 @@ class _Screen2State extends State<Screen2> {
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 50, left: 15, right: 15),
-              child: Container(
-                height: 60,
-                color: Colors.pink,
-                child: Center(
-                  child: Text(
-                    "LOG IN",
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: 1.3),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => Screen4()));
+              },
+              child: Padding(
+                padding: EdgeInsets.only(top: 50, left: 15, right: 15),
+                child: Container(
+                  height: 60,
+                  color: Colors.pink,
+                  child: Center(
+                    child: Text(
+                      "LOG IN",
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 1.3),
+                    ),
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 40),
-              child: Text(
-                "Not a member yet? Create account",
-                style: TextStyle(
-                  color: Colors.black.withOpacity(0.8),
-                  letterSpacing: 1.1,fontWeight: FontWeight.w400
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => Screen3()));
+              },
+              child: Padding(
+                padding: EdgeInsets.only(top: 40),
+                child: Text(
+                  "Not a member yet? Create account",
+                  style: TextStyle(
+                      color: Colors.black.withOpacity(0.8),
+                      letterSpacing: 1.1,
+                      fontWeight: FontWeight.w400),
                 ),
               ),
             )

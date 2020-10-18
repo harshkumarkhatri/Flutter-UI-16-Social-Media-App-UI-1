@@ -5,8 +5,6 @@ Widget commentItem(name, context) {
   return Padding(
     padding: const EdgeInsets.all(15.0),
     child: Container(
-      // height: 150,
-      // color: Colors.pink[50],
       child: Row(
         children: [
           Container(height: 84, width: 84, color: Colors.grey),

@@ -4,8 +4,6 @@ Widget chatItem(name) {
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: Container(
-        // height: 150,
-        // color: Colors.pink[50],
         child: Row(
           children: [
             Container(height: 64, width: 64, color: Colors.grey),

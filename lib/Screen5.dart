@@ -1,3 +1,5 @@
+// This file is for the friends screen
+
 import 'package:flutter/material.dart';
 
 import 'Widgets/chatItem.dart';
@@ -15,11 +17,7 @@ class _Screen5State extends State<Screen5> {
       appBar: AppBar(
         backgroundColor: Colors.pink[600],
         centerTitle: true,
-        title: Text("Friends"),
-        // leading: Icon(
-        //   Icons.menu,
-        //   color: Colors.white,
-        // ),
+        title: Text("FRIENDS"),
         actions: [
           PopupMenuButton<String>(
             onSelected: handleClick,
