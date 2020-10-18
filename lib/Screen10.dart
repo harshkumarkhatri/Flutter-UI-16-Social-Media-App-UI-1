@@ -12,9 +12,20 @@ class Screen10 extends StatefulWidget {
 }
 
 class _Screen10State extends State<Screen10> {
+  File _image;
+  final picker = ImagePicker();
 
+  Future getImage() async {
+    final pickedFile = await picker.getImage(source: ImageSource.camera);
 
-  
+    setState(() {
+      if (pickedFile != null) {
+        _image = File(pickedFile.path);
+      } else {
+        print('No image selected.');
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -85,6 +96,7 @@ class _Screen10State extends State<Screen10> {
                           children: [
                             GestureDetector(
                                 onTap: () {
+                                  getImage();
                                 },
                                 child: videoItem()),
                             SizedBox(height: 15),
